@@ -1,4 +1,4 @@
 mafeifan.github.io
 ==================
 
-my personal blog
+my personal blog  http://mafeifan.github.io
