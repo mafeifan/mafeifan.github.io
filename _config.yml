@@ -10,4 +10,4 @@ github_username:  mafeifan
 # Build settings
 markdown: kramdown
 permalink: pretty
-highlighter: rouge
+#highlighter: rouge
