@@ -9,5 +9,7 @@ github_username:  mafeifan
 
 # Build settings
 markdown: kramdown
+# use in github
 permalink: pretty
-highlighter: rouge
+# use in local
+#highlighter: rouge
