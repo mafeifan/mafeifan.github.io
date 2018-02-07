@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -93,18 +93,16 @@
 
 
 
-<meta name="description" content="通过 https://developer.mozilla.org 能学到不少web知识。现总结如下，不定期更新 HTMLElement.dataset属性html元素有一个全局属性。dataset。通过data-yourCustom的方式给DOM元素设置属性，然后通过dataset.yourCustom 读取或设置属性值 看下面的例子中以data-开头的属性 John Doe   12345678">
-<meta name="keywords" content="javascript">
-<meta property="og:type" content="article">
-<meta property="og:title" content="看MDN的学到的总结">
-<meta property="og:url" content="http://mafei.fun/2017/08/02/MDN/index.html">
+<meta name="description" content="保持一颗向上的心">
+<meta property="og:type" content="website">
+<meta property="og:title" content="flyforfun">
+<meta property="og:url" content="http://mafei.fun/page/2/index.html">
 <meta property="og:site_name" content="flyforfun">
-<meta property="og:description" content="通过 https://developer.mozilla.org 能学到不少web知识。现总结如下，不定期更新 HTMLElement.dataset属性html元素有一个全局属性。dataset。通过data-yourCustom的方式给DOM元素设置属性，然后通过dataset.yourCustom 读取或设置属性值 看下面的例子中以data-开头的属性 John Doe   12345678">
+<meta property="og:description" content="保持一颗向上的心">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-05T03:25:37.360Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="看MDN的学到的总结">
-<meta name="twitter:description" content="通过 https://developer.mozilla.org 能学到不少web知识。现总结如下，不定期更新 HTMLElement.dataset属性html元素有一个全局属性。dataset。通过data-yourCustom的方式给DOM元素设置属性，然后通过dataset.yourCustom 读取或设置属性值 看下面的例子中以data-开头的属性 John Doe   12345678">
+<meta name="twitter:title" content="flyforfun">
+<meta name="twitter:description" content="保持一颗向上的心">
 
 
 
@@ -132,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://mafei.fun/2017/08/02/MDN/"/>
+  <link rel="canonical" href="http://mafei.fun/page/2/"/>
 
 
 
 
 
-  <title>看MDN的学到的总结 | flyforfun</title>
+  <title>flyforfun</title>
   
 
 
@@ -163,7 +161,9 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -246,9 +246,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -274,7 +274,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">看MDN的学到的总结</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/02/MDN/" itemprop="url">看MDN的学到的总结</a></h1>
         
 
         <div class="post-meta">
@@ -321,130 +323,427 @@
       
 
       
-        <p>通过 <a href="https://developer.mozilla.org" target="_blank" rel="external">https://developer.mozilla.org</a> 能学到不少web知识。现总结如下，不定期更新</p>
+        
+          <p>通过 <a href="https://developer.mozilla.org" target="_blank" rel="external">https://developer.mozilla.org</a> 能学到不少web知识。现总结如下，不定期更新</p>
 <h3 id="HTMLElement-dataset属性"><a href="#HTMLElement-dataset属性" class="headerlink" title="HTMLElement.dataset属性"></a>HTMLElement.dataset属性</h3><p>html元素有一个全局属性。dataset。通过<code>data-yourCustom</code>的方式给DOM元素设置属性，然后通过<br><code>dataset.yourCustom</code> 读取或设置属性值</p>
 <p>看下面的例子中以<code>data-</code>开头的属性</p>
 <div id="user" data-id="1234567890" data-user="johndoe" data-date-of-birth="">John Doe</div>
 
 
 <pre><code><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> el = <span class="built_in">document</span>.querySelector(<span class="string">'#user'</span>);</div><div class="line"></div><div class="line"><span class="comment">// el.id == 'user'</span></div><div class="line"><span class="comment">// el.dataset.id === '1234567890'</span></div><div class="line"><span class="comment">// el.dataset.user === 'johndoe'</span></div><div class="line"><span class="comment">// el.dataset.dateOfBirth === ''</span></div><div class="line"></div><div class="line">el.dataset.dateOfBirth = <span class="string">'1960-10-03'</span>; <span class="comment">// set the DOB.</span></div><div class="line"></div><div class="line"><span class="comment">// 'someDataAttr' in el.dataset === false</span></div><div class="line"></div><div class="line">el.dataset.someDataAttr = <span class="string">'mydata'</span>;</div><div class="line"><span class="comment">// 'someDataAttr' in el.dataset === true</span></div></pre></td></tr></table></figure>
-</code></pre><a id="more"></a>
-<h3 id="内容安全策略（CSP）"><a href="#内容安全策略（CSP）" class="headerlink" title="内容安全策略（CSP）"></a><a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/CSP/Using_Content_Security_Policy" target="_blank" rel="external">内容安全策略（CSP）</a></h3><p>CSP是一个出色的 WEB 安全方案</p>
-<p>简而言之，内容安全策略（Content Security Policy，简称 CSP）是一种以可信白名单作机制，来限制网站中是否可以包含某来源的资源。资源类型细分为 Script、Style、Image、Font、Connect、Media、Object、Frame 等，可分别配置其来源。默认配置下不允许执行内联脚本和内联样式，也禁止执行 eval。</p>
-<p>实现方式也非常简单</p>
-<p>比如我在html的header中定义</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &apos;self&apos;; img-src https://*; child-src &apos;none&apos;;&quot;&gt;</div></pre></td></tr></table></figure>
-<p>这里就限制了所有图片只能通过https方式访问</p>
-<p><a href="http://cspisawesome.com/" target="_blank" rel="external">CSP 规则生成器</a><br><a href="https://www.teambition.com/en/developer/blog/article?p=developer-blog&amp;s=&amp;_id=5438e83ee903ca681810f174" target="_blank" rel="external">浏览器安全策略 CSP 部署：Teambition 实战</a></p>
-
+</code></pre>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/08/02/MDN/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
-      
-        
-
       
     </div>
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
-          
-        </div>
+
+      
+
       
 
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/07/29/blog-todo/" rel="next" title="网站待处理的问题">
-                <i class="fa fa-chevron-left"></i> 网站待处理的问题
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/03/awesome-websites/" rel="prev" title="收集的牛逼的网站">
-                收集的牛逼的网站 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+      
 
-    <div class="post-spread">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://mafei.fun/2017/07/29/blog-todo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Finley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="flyforfun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/29/blog-todo/" itemprop="url">网站待处理的问题</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-29T17:27:37+08:00">
+                2017-07-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
       
         
-  <div class="bdsharebuttonbox">
-    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-    <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
-    <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
-    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
-    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
-    <a href="#" class="bds_tieba" data-cmd="tieba" title="分享到百度贴吧"></a>
-    <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
-    <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
-    <a href="#" class="bds_more" data-cmd="more"></a>
-    <a class="bds_count" data-cmd="count"></a>
-  </div>
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "2",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "share": {
-        "bdSize": "16",
-        "bdStyle": "0"
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      }
-    }
-  </script>
-
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
+          <h3 id="更新记录"><a href="#更新记录" class="headerlink" title="更新记录"></a>更新记录</h3><ul>
+<li>2017.9.01 升级为https</li>
+<li>2017.8.18 加入 CNZZ 统计</li>
+<li>2017.8.09 安装 <a href="https://github.com/hexojs/hexo-generator-sitemap" target="_blank" rel="external">https://github.com/hexojs/hexo-generator-sitemap</a> 插件</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/29/blog-todo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
-  </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://mafei.fun/2017/07/20/reduce-function-javascript/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Finley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="flyforfun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/20/reduce-function-javascript/" itemprop="url">reduce-function-javascript</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-20T17:56:08+08:00">
+                2017-07-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>转载： <a href="https://aotu.io/notes/2016/04/14/js-reduce/index.html" target="_blank" rel="external">JavaScript中reduce()方法不完全指南</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce" target="_blank" rel="external">More From MDN</a></p>
+<p>reduce() 方法接收一个函数作为累加器，数组中的每个值（从左到右）开始缩减，最终为一个值，是ES5中新增的又一个数组逐项处理方法，那reduce方法跟foreach、map等数组方法又有啥区别呢。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">array.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">accumulator, currentValue, currentIndex, array</span>), <span class="title">initialValue</span>)</span></div></pre></td></tr></table></figure>
+<h3 id="参数："><a href="#参数：" class="headerlink" title="参数："></a>参数：</h3><ul>
+<li>callback（一个在数组中每一项上调用的函数，接受四个函数：）<ul>
+<li>previousValue（上一次调用回调函数时的返回值，或者初始值）</li>
+<li>currentValue（当前正在处理的数组元素）</li>
+<li>currentIndex（当前正在处理的数组元素下标）</li>
+<li>array（调用reduce()方法的数组）</li>
+</ul>
+</li>
+<li>initialValue（可选的初始值。作为第一次调用回调函数时传给previousValue的值）</li>
+</ul>
+<h3 id="图解参数"><a href="#图解参数" class="headerlink" title="图解参数:"></a>图解参数:</h3><p>抛开上面晦涩难懂的语法介绍，下面我们直接上实例：</p>
+<p><img src="/images/0720_reduce-function-javascript/param.jpg" alt="param"></p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/20/reduce-function-javascript/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://mafei.fun/2017/07/18/post-demo/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Finley">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="flyforfun">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/18/post-demo/" itemprop="url">Markdown 测试</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-18T20:33:13+08:00">
+                2017-07-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="Markdown语法："><a href="#Markdown语法：" class="headerlink" title="Markdown语法："></a>Markdown语法：</h2><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>大标题<br>=<br>小标题<br>-</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/18/post-demo/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
 
 
           </div>
@@ -452,12 +751,6 @@
 
 
           
-  <div class="comments" id="comments">
-    
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDM2Mi82OTE1"></div>
-    
-  </div>
-
 
         </div>
         
@@ -478,17 +771,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -588,22 +872,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTMLElement-dataset属性"><span class="nav-number">1.</span> <span class="nav-text">HTMLElement.dataset属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#内容安全策略（CSP）"><span class="nav-number">2.</span> <span class="nav-text">内容安全策略（CSP）</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -717,10 +985,10 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-
+  
 
   
 
@@ -749,17 +1017,6 @@
 
 
 
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
   
 
 
